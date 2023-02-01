@@ -11,7 +11,7 @@ This packer script will create an OpenSUSE Leap 15.4 Template. tergeted to be a 
 
 ## Create a hashed 512-sha password for the priviledged user
 
-The user ```root``` is employed in the script for simpicity of operations and a hashed password must be provided in the ```autoinst.xml``` file.
+The user ```root``` is employed in the script for simplicity of operations and a hashed password must be provided in the ```autoinst.xml``` file.
 To generate a hashed 512-sha password for this user, you can use ```openssl``` as the example below:
 
 ```sh
@@ -21,7 +21,7 @@ Verifying - Password:
 $6$qe3staoHstY7ptxj$.QDw8GgQE.UFUdynEkJPgPdImB//Xu3M58dOXJ.KuE.MURj0D/PxzxWvlLVn4Nfd0woBCphXt2TRxwXwJ/Ltp1
 ```
 
-## Running paker build with hcl
+## Running packer build with hcl
 
 Rename the ```variables.pkrvar.hcl``` and populate as you see fit.
 run the following and enjoy your coffee :)
