@@ -89,8 +89,8 @@ source "vsphere-iso" "opensuse_goldenimage" {
   guest_os_type        = "sles15_64Guest"
   host                 = "${var.host}"
   insecure_connection  = "true"
-  iso_checksum         = "f38572d2419a0a64715fd33b4b3f867d69dfcd0cb8727196a5f71621d8c69ccf"
-  iso_url             = "http://reposrv.lab.k8/openSUSE-Leap-15.4-CR-DVD-x86_64-Media.iso"
+  iso_checksum         = "${var.iso_checksum}"
+  iso_url             = "${var.iso_url}"
   password        = "${var.password}"
   RAM             = "${var.ram}"
   RAM_reserve_all = true
