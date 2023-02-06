@@ -15,6 +15,10 @@ variable "network" {
   type    = string
 }
 
+variable "username" {
+  type    = string
+}
+
 variable "password" {
   type    = string
 }
@@ -64,6 +68,30 @@ variable "disk1_size" {
 }
 
 variable "vm_name" {
+  type    = string
+}
+
+#
+# PROXY Variables
+#
+
+variable "PROXY_ENABLED" {
+  type    = string
+}
+
+variable "HTTP_PROXY" {
+  type    = string
+}
+
+variable "HTTPS_PROXY" {
+  type    = string
+}
+
+variable "FTP_PROXY" {
+  type    = string
+}
+
+variable "NO_PROXY" {
   type    = string
 }
 
@@ -123,6 +151,12 @@ build {
 
   provisioner "shell" {
     execute_command = "echo '${var.ssh_password}' | sudo -S -E bash '{{ .Path }}'"
+    environment_vars = ["PROXY_ENABLED=\"${var.PROXY_ENABLED}\"",
+                        "HTTP_PROXY=\"${var.HTTP_PROXY}\"",
+                        "HTTPS_PROXY=\"${var.HTTPS_PROXY}\"",
+                        "FTP_PROXY=\"${var.FTP_PROXY}\"",
+                        "NO_proxy=\"${var.NO_PROXY}\""
+                        ]
     scripts         = ["install.sh"]
     expect_disconnect = true
   }
