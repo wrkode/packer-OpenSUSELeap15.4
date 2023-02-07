@@ -6,13 +6,6 @@
 # wait 10 minutes :)
 sleep 600
 
-cat > /etc/sysconfig/proxy <<EOL
-PROXY_ENABLED=${PROXY_ENABLED}
-HTTP_PROXY=${HTTP_PROXY}
-HTTPS_PROXY=${HTTPS_PROXY}
-FTP_PROXY=${FTP_PROXY}
-NO_PROXY=${NO_PROXY}
-EOL
 # Disable swap - generally recommendeded for K8s
 # Handling this in the pre-seed (autoinst.xml)
 # swapoff -a
@@ -39,3 +32,4 @@ fi
 rm -rf /tmp/* /tmp/.* /var/tmp/* /var/tmp/.* &> /dev/null || true
 rm -rf /var/cache/*/* /var/crash/* /var/lib/systemd/coredump/*
 cloud-init clean -s -l
+
