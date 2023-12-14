@@ -126,7 +126,7 @@ build {
   sources = ["source.vsphere-iso.opensuse_goldenimage"]
 
   provisioner "shell" {
-    execute_command = "echo '${var.ssh_password}' | sudo -S env -E bash '{{ .Path }}'"
+    execute_command = "echo '${var.ssh_password}' | sudo -S env '{{ .Path }}'"
     scripts         = ["install.sh"]
     expect_disconnect = true
   }

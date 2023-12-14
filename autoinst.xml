@@ -5,35 +5,35 @@
     <add_on_others t="list">
       <listentry t="map">
         <alias>repo-backports-update</alias>
-        <media_url>http://download.opensuse.org/update/leap/15.4/backports/</media_url>
+        <media_url>http://download.opensuse.org/update/leap/15.5/backports/</media_url>
         <name>Update repository of openSUSE Backports</name>
         <priority t="integer">99</priority>
         <product_dir>/</product_dir>
       </listentry>
       <listentry t="map">
         <alias>repo-non-oss</alias>
-        <media_url>http://download.opensuse.org/distribution/leap/15.4/repo/non-oss/</media_url>
+        <media_url>http://download.opensuse.org/distribution/leap/15.5/repo/non-oss/</media_url>
         <name>Non-OSS Repository</name>
         <priority t="integer">99</priority>
         <product_dir>/</product_dir>
       </listentry>
       <listentry t="map">
         <alias>repo-oss</alias>
-        <media_url>http://download.opensuse.org/distribution/leap/15.4/repo/oss/</media_url>
+        <media_url>http://download.opensuse.org/distribution/leap/15.5/repo/oss/</media_url>
         <name>OSS Repository</name>
         <priority t="integer">99</priority>
         <product_dir>/</product_dir>
       </listentry>
       <listentry t="map">
         <alias>repo-sle-update</alias>
-        <media_url>http://download.opensuse.org/update/leap/15.4/sle/</media_url>
+        <media_url>http://download.opensuse.org/update/leap/15.5/sle/</media_url>
         <name>Update repository with updates from SUSE Linux Enterprise 15</name>
         <priority t="integer">99</priority>
         <product_dir>/</product_dir>
       </listentry>
       <listentry t="map">
         <alias>repo-update-non-oss</alias>
-        <media_url>http://download.opensuse.org/update/leap/15.4/non-oss/</media_url>
+        <media_url>http://download.opensuse.org/update/leap/15.5/non-oss/</media_url>
         <name>Update Repository (Non-Oss)</name>
         <priority t="integer">99</priority>
         <product_dir>/</product_dir>
